@@ -15,5 +15,4 @@ b3 = Book("Hello World")
 
 # TODO: print the class and property
 print(b1)
-
 print(b1.title)
