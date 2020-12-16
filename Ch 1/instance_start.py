@@ -22,7 +22,8 @@ b2 = Book("The Catcher in the Rye", "Ashley", 11, 11.0)
 
 # TODO: print the price of book1
 print("The price is :", b1.price)
-
+print(b1.getPrice())
+print(b2.getPrice())
 
 # TODO: try setting the discount
 
