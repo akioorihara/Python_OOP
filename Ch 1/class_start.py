@@ -7,6 +7,7 @@ class Book:
     BOOK_TYPES = ("HARDCOVER", "PAPERBACK", "EBOOK")
 
     # TODO: double-underscore properties are hidden from other classes
+    __booklist = None 
 
     # TODO: create a class method
     @classmethod
@@ -14,6 +15,12 @@ class Book:
         return cls.BOOK_TYPES
 
     # TODO: create a static method
+    @staticmethod
+    def getBookList():
+        if Book.__booklist == None:
+            Book.__booklist = []
+        else: 
+            return Book.__booklist
 
     # instance methods receive a specific object instance as an argument
     # and operate on data specific to that object instance
@@ -27,8 +34,6 @@ class Book:
         else: 
             self.booktype = booktype 
 
-
-
 # TODO: access the class attribute
 print("Book Type is : ", Book.getBookTypes())
 
@@ -37,3 +42,7 @@ b1 = Book("Title 1", "HARDCOVER")
 b2 = Book("Title 2", "EBOOK")
 
 # TODO: Use the static method to access a singleton object
+theBooks = Book.getBookList()
+theBooks.append(b1)
+theBooks.append(b2)
+print(theBooks)
