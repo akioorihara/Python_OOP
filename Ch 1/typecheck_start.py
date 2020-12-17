@@ -19,8 +19,8 @@ n1 = Newspaper("The Washington Post")
 n2 = Newspaper("The New York Times")
 
 # TODO: use type() to inspect the object type
-print(type(b1))
-print(type(n1))
+# print(type(b1))
+# print(type(n1))
 
 # TODO: compare two types together
 # def compareDataType(self): 
@@ -28,7 +28,11 @@ print(type(n1))
 #         print("The same data type")
 #     else:
 #         print("not the same data type")
-print(type(b1) == type(b2))
-print(type(n1) == type(b1))
+# print(type(b1) == type(b2))
+# print(type(n1) == type(b1))
 
 # TODO: use isinstance to compare a specific instance to a known type
+print(isinstance(b1, Book))
+print(isinstance(n1, Newspaper))
+print(isinstance(n2, Book))
+print(isinstance(n1, object))
