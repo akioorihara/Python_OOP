@@ -23,8 +23,8 @@ class Book:
              
     # instance methods receive a specific object instance as an argument
     # and operate on data specific to that object instance
-    def setTitle(self, newtitle):
-        self.title = newtitle
+    # def setTitle(self, newtitle):
+    #     self.title = newtitle
 
     def __init__(self, title, booktype):
         self.title = title
