@@ -18,7 +18,16 @@ class Book:
             return (self.title == value.title and self.author == value.author and self.price == value.price)
     # TODO: the __ge__ establishes >= relationship with another obj
 
+    def __ge__(self, value):
+        if not isinstance(value, Book):
+            raise ValueError("Can't compare this value with Book value")
+        return self.price >= value.price
     # TODO: the __lt__ establishes < relationship with another obj
+
+    def __lt__(self, value):
+        if not isinstance(value, Book):
+            raise ValueError("Can't compare this value with Book value")
+        return self.price <= value.price
 
 
 b1 = Book("War and Peace", "Leo Tolstoy", 39.95)
@@ -27,9 +36,20 @@ b3 = Book("War and Peace", "Leo Tolstoy", 39.95)
 b4 = Book("To Kill a Mockingbird", "Harper Lee", 24.95)
 
 # TODO: Check for equality
-print(b1 == b3)
-
+# print(b1 == b3)
 # TODO: Check for greater and lesser value
-
-
+# print(b1 <= b2)
+# print(b2 >= b1)
 # TODO: Now we can sort them too
+books = [b1, b3, b2, b4]
+
+for x in books:
+    print(x.title)
+
+print("--------------------")
+# print([Book.title for Book in books])
+books.sort()
+# print([Book.title for Book in books])
+
+for x in books:
+    print(x.title)
